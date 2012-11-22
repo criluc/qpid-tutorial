@@ -1,0 +1,28 @@
+https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_MRG/1.1/html-single/Messaging_Tutorial/index.html#chap-Messaging_Tutorial-Initial_Concepts
+
+sudo apt-get install qpidd
+sudo apt-get install python-qpid
+
+sudo /usr/sbin/saslpasswd2 -f /etc/qpid/qpidd.sasldb -u QPID cristian
+
+
+in /etc/qpid/qpidd.conf
+
+
+
+Activemq
+========
+
+http://activemq.apache.org
+
+$ sudo apt-get install activemq
+$ sudo ln -s /etc/activemq/instances-available/main /etc/activemq/instances-enabled/main
+
+http://packages.python.org/stompy/introduction.html
+
+$ sudo apt-get install python-stompy
+<transportConnectors>
+	<!-- altri connettori... -->
+	<transportConnector name="stomp" uri="stomp://localhost:61613"/>
+</transportConnectors>
+
