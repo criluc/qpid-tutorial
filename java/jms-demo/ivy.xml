@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ivy-module version="2.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info organisation="it.nic" module="jms-demo" revision="1.0.6" status="integration">
+        <ivyauthor name="Lorenzo Luconi Trombacchi"/>
+	</info>
+	<configurations>
+		<conf name="default"/>
+		<conf name="build" />
+	</configurations>
+
+	<dependencies defaultconf="default" defaultconfmapping="*->default">
+        <dependency org="org.projectlombok" name="lombok" rev="0.10.8" conf="build" />
+		
+		<dependency org="org.apache.camel" name="camel-core" rev="2.8.4" />
+		<dependency org="org.apache.camel" name="camel-jms"	rev="2.8.4" />
+		<dependency org="org.apache.camel" name="camel-stream"	rev="2.8.4" />
+		<dependency org="org.apache.camel" name="camel-mail" rev="2.8.4" />
+
+		<dependency org="org.apache.activemq" name="activemq-core" rev="5.5.0" transitive="false"/>
+		<dependency org="org.apache.activemq" name="activemq-pool" rev="5.5.0" transitive="true"/>
+		<dependency org="javax.jms" name="jms" rev="1.1"/>
+		<dependency org="org.apache.geronimo.specs" name="geronimo-j2ee-management_1.1_spec" rev="1.0.1"/>
+		
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.6.1"/>
+        <dependency org="org.slf4j" name="jcl-over-slf4j" rev="1.6.1" />
+        <dependency org="org.slf4j" name="log4j-over-slf4j" rev="1.6.1" />
+        <dependency org="ch.qos.logback" name="logback-classic" rev="0.9.29" />
+	</dependencies>
+</ivy-module>
