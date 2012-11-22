@@ -19,10 +19,10 @@ BROKER_PORT = 61613
 
 class MyListener(object):
     def on_error(self, headers, message):
-        print 'received an error %s' % message
+        print 'received an error: %s' % message
 
     def on_message(self, headers, message):
-        print 'received a message %s' % message
+        print 'received a message: %s' % message
 
 conn = stomp.Connection([(BROKER_HOST, BROKER_PORT)])
 conn.add_listener(MyListener())
