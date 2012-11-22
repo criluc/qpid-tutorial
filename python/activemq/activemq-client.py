@@ -29,6 +29,7 @@ conn.add_listener(MyListener())
 conn.start()
 conn.connect()
 
+#Sottoscrizione della coda
 conn.subscribe(destination='/queue/test', ack='auto')
 
 #conn.send(' '.join(sys.argv[1:]), destination='/queue/test')
