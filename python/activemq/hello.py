@@ -55,3 +55,5 @@ except MessagingError,m:
   print m
 
 connection.close()
+
+#Fissato 151
